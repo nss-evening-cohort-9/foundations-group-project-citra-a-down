@@ -7,9 +7,6 @@
 .secondary-text-color  { color: #757575; }
 .divider-color         { border-color: #BDBDBD; }
 
-body {
-    background-color: pink;
-}
 
 #home-aboutUs .card {
     background-color: transparent;
