@@ -1,7 +1,8 @@
-dark-primary-color    { background: #F57C00; }
-.default-primary-color { background: rgb(255, 174, 0); }
+.dark-primary-color    { background: #F57C00; }
+.default-primary-color { background: #FF9800; }
 .light-primary-color   { background: #FFE0B2; }
 .text-primary-color    { color: #212121; }
+.accent-color-bg       { background: #4CAF50; }
 .accent-color          { color: #4CAF50; }
 .primary-text-color    { color: #212121; }
 .secondary-text-color  { color: #757575; }
@@ -21,8 +22,6 @@ p {
 .founder-image {
   height:200px;
 }
-
-.form-group{margin-right: }
 
 .contactContainer{
    text-align: right;
