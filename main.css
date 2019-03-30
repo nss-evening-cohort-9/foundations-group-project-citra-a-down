@@ -10,3 +10,7 @@
 body {
     background-color: pink;
 }
+
+.home-jumbotron {
+    background-image: url("https://cdn2.justwineapp.com/assets/article/2017/05/free-beer-images-keg-cask-tapping-creative-commons-cc-oktoberfest-photos.jpg");
+}
