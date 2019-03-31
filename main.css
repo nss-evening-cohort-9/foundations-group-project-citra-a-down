@@ -8,6 +8,7 @@
 .secondary-text-color  { color: #757575; }
 .divider-color         { border-color: #BDBDBD; }
 
+
 body {
     background-color: rgb(255, 174, 0);
 }
@@ -16,12 +17,7 @@ body {
     background-image: url("https://cdn2.justwineapp.com/assets/article/2017/05/free-beer-images-keg-cask-tapping-creative-commons-cc-oktoberfest-photos.jpg");
 }
 
-h1 {
-    color: whitesmoke;
-    text-align: center;
-}
-
-p {
+.card-title {
    text-align: center;
 }
 
@@ -33,3 +29,21 @@ p {
    text-align: right;
    margin-right: 300px;
 }
+
+#about-us .card {
+    background-color: transparent;
+    border: none;
+}
+
+#ourFullStoryButton {
+    border: solid 1px black;
+    color: white;
+    background-color: #4CAF50;
+}
+
+#ourFullStoryButton:hover {
+    background-color: white;
+    color: #4CAF50;
+    cursor: pointer;
+}
+
