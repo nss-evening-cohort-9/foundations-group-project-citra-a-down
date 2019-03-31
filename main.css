@@ -2,11 +2,38 @@
 .default-primary-color { background: #FF9800; }
 .light-primary-color   { background: #FFE0B2; }
 .text-primary-color    { color: #212121; }
-.accent-color          { background: #4CAF50; }
+.accent-color-bg       { background: #4CAF50; }
+.accent-color          { color: #4CAF50; }
 .primary-text-color    { color: #212121; }
 .secondary-text-color  { color: #757575; }
 .divider-color         { border-color: #BDBDBD; }
 
+
+body {
+    background-color: rgb(255, 174, 0);
+}
+
+.home-jumbotron {
+    background-image: url("https://cdn2.justwineapp.com/assets/article/2017/05/free-beer-images-keg-cask-tapping-creative-commons-cc-oktoberfest-photos.jpg");
+}
+
+h1 {
+    color: whitesmoke;
+    text-align: center;
+}
+
+p {
+   text-align: center;
+}
+
+.founder-image {
+    height:200px;
+}
+
+.contactContainer{
+   text-align: right;
+   margin-right: 300px;
+}
 
 #home-aboutUs .card {
     background-color: transparent;
@@ -16,6 +43,7 @@
 #ourFullStoryButton {
     border: solid 1px black;
     color: white;
+    background-color: #4CAF50;
 }
 
 #ourFullStoryButton:hover {
@@ -23,3 +51,4 @@
     color: #4CAF50;
     cursor: pointer;
 }
+
