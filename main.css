@@ -8,6 +8,7 @@
 .secondary-text-color  { color: #757575; }
 .divider-color         { border-color: #BDBDBD; }
 
+
 body {
     background-color: rgb(255, 174, 0);
 }
@@ -33,3 +34,21 @@ p {
    text-align: right;
    margin-right: 300px;
 }
+
+#home-aboutUs .card {
+    background-color: transparent;
+    border: none;
+}
+
+#ourFullStoryButton {
+    border: solid 1px black;
+    color: white;
+    background-color: #4CAF50;
+}
+
+#ourFullStoryButton:hover {
+    background-color: white;
+    color: #4CAF50;
+    cursor: pointer;
+}
+
