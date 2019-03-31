@@ -12,3 +12,14 @@
     background-color: transparent;
     border: none;
 }
+
+#ourFullStoryButton {
+    border: solid 1px black;
+    color: white;
+}
+
+#ourFullStoryButton:hover {
+    background-color: white;
+    color: #4CAF50;
+    cursor: pointer;
+}
