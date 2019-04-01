@@ -4,59 +4,32 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Citra Brewing</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-  </head>
-  <body>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand" href="./index.html">
-          <img
-            src="./img/citra logo.jpg"
-            width="30"
-            height="30"
-            class="d-inline-block align-top"
-            alt=""
-          />
-          A** Down
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNavAltMarkup"
-        >
-          <div class="navbar-nav">
-            <a class="nav-item nav-link" href="./index.html">Home</a>
-            <a class="nav-item nav-link" href="./pages/about-us.html"
-              >About Us <span class="sr-only">(current)</span></a
-            >
-            <a class="nav-item nav-link" href="./pages/our-beers.html"
-              >Our Beers</a
-            >
-            <a class="nav-item nav-link" href="./pages/six-pack.html"
-              >Our Beers</a
-            >
-          </div>
-        </div>
-      </div>
-    </nav>
-    <div class="jumbotron jumbotron-fluid default-primary-color home-jumbotron text-light">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+</head>
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark p-0">
+        <div class="container">
+            <a class="navbar-brand p-0" href="./index.html">
+                <img src="./img/citra-logo.png" width="70" height="70" class="d-inline-block align-top" alt="" style="overflow: visible;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="./index.html">Home</a>
+                <a class="nav-item nav-link" href="./pages/about-us.html">About Us <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="./pages/our-beers.html">Our Beers</a>
+                <a class="nav-item nav-link" href="./pages/six-pack.html">Create Six Pack</a>
+            </div>
+            </div>
+      </nav>
+
+    <div class="jumbotron jumbotron-fluid default-primary-color home-jumbotron accent-color">
+
         <div class="container">
             <h1 class="display-4 font-weight-bold">Welcome</h1>
             <p class="lead font-weight-bold">A Nashville Original since 2019</p>
@@ -67,7 +40,8 @@
             </div>
         </div>
     </div>
-    <div class="container row default-primary-color col-10" id="home-aboutUs" style="margin:auto">
+    <div class="container row default-primary-color col-10" id="about-us" style="margin:auto">
+
       <p class="col-12 col-md-6 my-auto">
         Any air hocky table can intoxicatedly know a Keystone, but it takes a
         real Avery IPA to share a shower with the bull ice. If an Alaskan St.
@@ -82,7 +56,9 @@
       </p>
       <div class="col-12 col-md-6">
         <div class="card text-center">
-            <h3 class="card-title" style="color: white">About Us</h3>
+
+            <h3 class="card-title about-us-card" style="color: white;">About Us</h3>
+
             <img class="card-img-top" src="img/team_selfie.JPG" alt="Team Selfie">
             <div class="card-body">
               <a id="ourFullStoryButton" class="btn btn-primary accent-color">Our Full Story</a>
@@ -90,19 +66,10 @@
         </div>
       </div>
     </div>
+      
     <nav class="navbar navbar-light bg-light d-flex flex-column" id="footer">
-      <img
-        class="navbar-brand"
-        id="footer-logo"
-        src="img/citra logo.jpg"
-        height="200px"
-      />
-      <img
-        class="navbar-brand"
-        id="footer-copyright"
-        src="img/copyright.jpg"
-        height="100px"
-      />
+        <img class="navbar-brand" id="footer-logo" src="./img/citra-logo.png" height="200px">
+        <img class="navbar-brand" id="footer-copyright" src="img/copyright.jpg" height="100px">
     </nav>
 
     <script
