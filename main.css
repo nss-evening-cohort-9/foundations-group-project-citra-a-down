@@ -30,6 +30,7 @@ body {
    margin-right: 300px;
 }
 
+#six-pack .card,
 #about-us .card {
     background-color: transparent;
     border: none;
