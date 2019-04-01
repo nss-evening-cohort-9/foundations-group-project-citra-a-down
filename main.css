@@ -30,6 +30,7 @@ body {
    margin-right: 300px;
 }
 
+#six-pack .card,
 #about-us .card {
     background-color: transparent;
     border: none;
@@ -48,6 +49,7 @@ body {
 }
 
 #ourBeersCarousel {
-    margin-top: 100px;
+    margin-top: 75px;
+    margin-bottom: 75px;
 }
 
