@@ -94,3 +94,16 @@ body {
 #form_name {
    font-size: 12px;
 }
+#ourBeersListHeader {
+    margin-top: 75px;
+    margin-bottom: 20px;
+}
+
+#ourBeersList {
+    font-weight: bold;
+}
+
+#ourBeersList .row {
+    margin-bottom: 15px;
+}
+

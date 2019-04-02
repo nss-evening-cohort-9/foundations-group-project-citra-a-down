@@ -28,6 +28,70 @@
         </div>
     </nav>
 
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container text-center">
+          <h1 class="display-2">Create Your Own Sixpack</h1>
+          <h2 id="ourBeersListHeader" class="display-8">Our Beers</h2>
+          <div id="ourBeersList" class="container col-12 col-lg-8">
+            <div class="row">
+                <div class="col-4">
+                   Citra OG 
+                </div>
+                <div class="col-4">
+                    Hypertext
+                </div>
+                <div class="col-4">
+                    forEach(American)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                   Parameter
+                </div>
+                <div class="col-4">
+                    Javascript
+                </div>
+                <div class="col-4">
+                    Encryption
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                   Double Click 
+                </div>
+                <div class="col-4">
+                    Pixel
+                </div>
+                <div class="col-4">
+                    Hacker
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 offset-4">
+                    Bootstrap
+                </div>
+                <div class="col-4">
+                    Blue Screen of Death
+                </div>
+                <div class="col-4">
+                    Digital Citizen
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <form class="container text-center">
+        <div class="form-group text-center">
+          <label for="beer"><h3>Choose a beer from the list</h3></label>
+          <input type="text" class="form-control" id="beer-input" aria-describedby="emailHelp" placeholder="Citra-A-Down">
+          <small id="emailHelp" class="form-text text-muted">Create your own 6-pack of beers, or 12-pack, or 24-pack, or truckload!</small>
+        </div>
+        <button type="button" id="add-beer" class="btn btn-primary m-auto">Add to Six Pack</button>
+        <button type="submit" id="remove-beers" class="btn btn-primary m-auto">Start Over</button>
+    </form>
+
+    <div id="sixpack-container" class="container d-flex flex-wrap justify-content-between"></div>
     
     <nav class="navbar navbar-light bg-light d-flex flex-column" id="footer">
         <img class="navbar-brand" id="footer-logo" src="../img/citra-logo.png" height="200px">
