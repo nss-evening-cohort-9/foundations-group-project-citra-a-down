@@ -28,7 +28,7 @@
             </div>
       </nav>
 
-    <div class="jumbotron jumbotron-fluid default-primary-color home-jumbotron accent-color">
+    <div class="jumbotron jumbotron-fluid home-jumbotron accent-color mb-0 bg-transparent">
 
         <div class="container">
             <h1 class="display-4 font-weight-bold">Welcome</h1>
@@ -40,7 +40,9 @@
             </div>
         </div>
     </div>
-    <div class="container row default-primary-color col-10" id="about-us" style="margin:auto">
+
+    <div class="section-container bg-dark p-5">
+    <div class="container d-flex accent-color" id="about-us">
 
       <p class="col-12 col-md-6 my-auto">
         Any air hocky table can intoxicatedly know a Keystone, but it takes a
@@ -57,7 +59,7 @@
       <div class="col-12 col-md-6">
         <div class="card text-center">
 
-            <h3 class="card-title about-us-card" style="color: white;">About Us</h3>
+            <h3 class="card-title about-us-card">About Us</h3>
 
             <img class="card-img-top" src="img/team_selfie.JPG" alt="Team Selfie">
             <div class="card-body">
@@ -66,7 +68,10 @@
         </div>
       </div>
     </div>
+</div>
 
+<div class="container">
+    <div class="text-center accent-color mb-0"><h3>Our Beers</h3></div>
     <div id="ourBeersCarousel" class="carousel slide col-10 offset-1" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#ourBeersCarousel" data-slide-to="0" class="active"></li>
@@ -75,10 +80,13 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img class="d-block col-8 offset-2" src="img/citra-logo.png" alt="First slide">
+          <img class="d-block col-8 offset-2" height="400" src="https://upload.wikimedia.org/wikipedia/commons/7/73/Weizenbier-ukko.jpg" alt="First slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block col-8 offset-2" src="img/citra logo.jpg" alt="Second slide">
+          <img class="d-block col-8 offset-2" height="400" src="https://c1.staticflickr.com/5/4111/4983706691_0e1e088c2f_b.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block col-8 offset-2" height="400" src="https://farm6.staticflickr.com/5759/23173120300_41a31b2323_b.jpg" alt="Second slide">
         </div>
       </div>
       <a class="carousel-control-prev" href="#ourBeersCarousel" role="button" data-slide="prev">
@@ -90,12 +98,14 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
+</div>
 
-    <div class="container row default-primary-color col-10" id="six-pack" style="margin:auto">
+    <div class="section-container bg-dark p-5">
+    <div class="container d-flex accent-color" id="six-pack" style="margin:auto">
       <div class="col-12 col-md-6">
         <div class="card text-center">
 
-            <h3 class="card-title about-us-card" style="color: white;">Create Your Own Six Pack</h3>
+            <h3 class="card-title about-us-card">Create Your Own Six Pack</h3>
 
             <img class="card-img-top" src="https://marketplace.canva.com/MADGw2OZaK8/6/screen/canva-flower-lime-beer-bottle-MADGw2OZaK8.jpg" alt="Team Selfie">
             <div class="card-body">
@@ -117,10 +127,11 @@
         ESB about a PBR.
       </p>
     </div>
+</div>
       
-    <nav class="navbar navbar-light bg-light d-flex flex-column" id="footer">
+    <nav class="footer-container navbar navbar-light bg-dark d-flex flex-column mb-0" id="footer">
         <img class="navbar-brand" id="footer-logo" src="./img/citra-logo.png" height="200px">
-        <img class="navbar-brand" id="footer-copyright" src="img/copyright.jpg" height="100px">
+        <p class="font-weight-bold">&#169 copyright all rights reserved</p>
     </nav>
 
     <script
