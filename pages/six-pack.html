@@ -74,6 +74,18 @@
           </div>
         </div>
       </div>
+
+    <form class="container text-center">
+        <div class="form-group text-center">
+          <label for="beer"><h3>Choose a beer from the list</h3></label>
+          <input type="text" class="form-control" id="beer-input" aria-describedby="emailHelp" placeholder="Citra-A-Down">
+          <small id="emailHelp" class="form-text text-muted">Create your own 6-pack of beers, or 12-pack, or 24-pack, or truckload!</small>
+        </div>
+        <button type="button" id="add-beer" class="btn btn-primary m-auto">Add to Six Pack</button>
+        <button type="submit" id="remove-beers" class="btn btn-primary m-auto">Start Over</button>
+    </form>
+
+    <div id="sixpack-container" class="container d-flex flex-wrap justify-content-between"></div>
     
     <nav class="navbar navbar-light bg-light d-flex flex-column" id="footer">
         <img class="navbar-brand" id="footer-logo" src="../img/citra-logo.png" height="200px">
