@@ -9,6 +9,27 @@
    <link rel="stylesheet" type="text/css" media="screen" href="../main.css">
 </head>
 <body>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Thank you! We have received your submission!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- this is the end of the modal -->
+
    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark p-0">
        <div class="container">
            <a class="navbar-brand p-0" href="./index.html">
@@ -35,26 +56,45 @@
 
 <div class='container d-flex' id='founders'></div>
 
-   <h1> Contact Us</h1>
+   <h1 class='text-center'> Contact Us</h1>
    <div class= "contactContainer">
-       <p>Feel free to contact us about business inquires, careers, or tell us what you think of a new beer flavor!
-               <form >
+     <div class='row'>
+     <div class='col-12 col-md-6'>
+       <p>   Feel free to contact us about business inquires, careers, or tell us what you think of a new beer flavor! </p>
+      </div>
+               <form class='col-12 col-md-6 text-center' >
                        <div class="form-group">
-                         <label for="exampleFormControlInput1">Email address</label>
-                         <input type="email" class="form-control-sm" id="exampleFormControlInput1" placeholder="name@example.com">
+                         <label for="form_email">Email</label>
+                         <input type="email" class="form-control-sm" id="form_email" placeholder="name@example.com">
                        </div>
                        <div class="form-group">
-                               <label for="exampleFormControlTextarea1">Name</label>
-                               <textarea class="form-control-sm" id="exampleFormControlTextarea1" rows="3"></textarea>
+                               <label for="form_name">Name</label>
+                               <textarea class="form-control-sm" id="form_name" rows="3"></textarea>
                              </div>
                        <div class="form-group">
-                         <label for="exampleFormControlTextarea1">Message</label>
-                         <textarea class="form-control-sm" id="exampleFormControlTextarea1" rows="3"></textarea>
+                         <label for="form_message"></label>
+                         <textarea class="form-control-lg col-8 col-xl-6" id="form_message" placeholder="message" rows="3"></textarea>
                        </div>
+
+                      <!-- Button trigger modal -->
+                       <button type="button" class="btn btn-success text align-center" data-toggle="modal" data-target="#exampleModal">
+                          Submit
+                          </button>
                      </form>
-       </p>
+                    </div>
+      
    </div>
 
+ 
+
+   
+
+
+ 
+      
+    
+
+   
 
    <nav class="navbar navbar-light bg-light d-flex flex-column" id="footer">
        <img class="navbar-brand" id="footer-logo" src="../img/citra-logo.png" height="200px">
