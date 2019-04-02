@@ -182,9 +182,9 @@ const printToDom = (divId, textToPrint) => {
  const domStringBuilder = (arrayToPrint) => {
         let domString = '';
         arrayToPrint.forEach((item) => {
-            domString +=  `<div class="card col-3 secondary-text-color">`
+            domString +=  `<div class="card col-12 col-md-6 col-lg-3 secondary-text-color">`
             domString +=  `<div class="card-body divider-color ">`;
-            domString +=  `<img src=${item.image} class="img-fluid founder-image" alt="Responsive image">`;
+            domString +=  `<img src=${item.image} class="img-fluid col-6" alt="Responsive image">`;
             domString +=  `<h3 class="card-title accent-color">${item.name}</h3>`;
             domString +=  `<p class="card-title text-primary-color">${item.description}</p>`;
             domString +=  `</div>`;
