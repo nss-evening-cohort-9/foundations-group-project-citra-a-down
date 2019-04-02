@@ -47,8 +47,11 @@ body {
    text-align: center;
 }
 
-.founder-image {
-   height: 200px;
+.img-fluid {
+   max-width: 100%; 
+   height: 250px ; 
+   margin-bottom: 15px;
+  
 }
 
 .contactContainer {
