@@ -1,3 +1,114 @@
+const arrayOfBeers = [
+    {
+     name: "Citra OG",
+     type: "American wheat",
+     style: "Wheat",
+     imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/73/Weizenbier-ukko.jpg",
+     ingredients: "malted wheat, Noble hops, yeast, water",
+     ibu: 25,
+     abv: 4.5
+    },
+    {
+     name: "Hypertext",
+     type: "Oatmeal Stout",
+     style: "Ales",
+     imageUrl: "https://c1.staticflickr.com/5/4111/4983706691_0e1e088c2f_b.jpg",
+     ingredients: "malted barley, hops, yeast, water",
+     ibu: 27,
+     abv: 5.3
+    },
+    {
+     name: "forEach(American)",
+     type: "American Lager",
+     style: "Lagers",
+     imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3kK6xiKcLz9ERVaLn3LDpX07KI0PjNDB0jvrhCLpZqL1izFwp",
+     ingredients: "malted barley, hops, yeast, water",
+     ibu: 13,
+     abv: 4.4
+    },
+    {
+     name: "Parameter",
+     type: "Pale Ale",
+     style: "Ales",
+     imageUrl: "http://art11.photozou.jp/pub/918/230918/photo/26047883_624.jpg",
+     ingredients: "malted barley, hops, yeast, water",
+     ibu: 40,
+     abv: 4.7
+    },
+   {
+     name: "Javascript",
+     type: "Porter",
+     style: "Ales",
+     imageUrl: "https://farm6.staticflickr.com/5759/23173120300_41a31b2323_b.jpg",
+     ingredients: "malted barley, hops, yeast, water",
+     ibu: 32,
+     abv: 5.6
+    }, 
+    {
+     name: "Encryption",
+     type: "English Brown",
+     style: "Ales",
+     imageUrl: "https://c1.staticflickr.com/6/5529/11163847405_b78604e766_b.jpg",
+     ingredients: "malted barley, hops, yeast, water",
+     ibu: 22,
+     abv: 4.6
+    },
+    {
+     name: "Double Click",
+     type: "Doppelbock",
+     style: "Lagers",
+     imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-b8h6lyY1hdbY8RU4pgDJIlztu1Y9YBkI1NrbMVPyBaQ2IYvX",
+     ingredients: "malted barley, hops, yeast, water",
+     ibu: 20,
+     abv: 8.5
+    },
+    {
+     name: "Pixel",
+     type: "Pilsner",
+     style: "Lagers",
+     imageUrl: "http://capl.washjeff.edu/1/l/1753.jpg",
+     ingredients: "malted barley, hops, yeast, water",
+     ibu: 30,
+     abv: 4.6
+    },
+    {
+     name: "Hacker",
+     type: "Schwarzbier",
+     style: "Lagers",
+     imageUrl: "https://urbanmatter.com/chicago/wp-content/uploads/2016/08/dark-beer.jpg",
+     ingredients: "malted barley, hops, yeast, water",
+     ibu: 25,
+     abv: 4.7
+    },
+    {
+     name: "Bootstrap",
+     type: "Belgian White",
+     style: "Wheat",
+     imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7CwrhxB69PhOa81pFiNnLs2fy8eGMpZS5wKeB4Jl1vVjZ2MEpZQ",
+     ingredients: "malted wheat, hops, yeast, water",
+     ibu: 10,
+     abv: 4.5
+    },
+    {
+     name: "Blue Screen of Death",
+     type: "Blueberry",
+     style: "Specialty",
+     imageUrl: "https://c1.staticflickr.com/3/2628/4122695099_80e09bac0d_b.jpg",
+     ingredients: "malted wheat, hops, yeast, water, blueberries",
+     ibu: 16,
+     abv: 8
+    },
+    {
+     name: "Digital Citizen",
+     type: "Oktoberfest",
+     style: "Specialty",
+     imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZrOHCcYX--6_ndvjP8KFX9ZVv8jc9qxw1l3nFokJNABAO9eNK9Q",
+     ingredients: "malted barley, hops, yeast, water, blueberries",
+     ibu: 20,
+     abv: 5.5
+    },
+];
+
 const arrayOfFounders = [
   {
     name: 'Heath',
@@ -62,10 +173,10 @@ const sixPackBuilder = () => {
   printToDom('sixpack-container', domString)
 }
  
- const printToDom = (divId, textToPrint) => {
+const printToDom = (divId, textToPrint) => {
     const selectedDiv = document.getElementById(divId);
     selectedDiv.innerHTML = textToPrint;
- };
+};
  
  
  const domStringBuilder = (arrayToPrint) => {
@@ -82,6 +193,24 @@ const sixPackBuilder = () => {
         });
         printToDom('founders', domString);
     }
+
+const beerCardBuilder = (arrayToPrint) => {
+  let domString = '';
+    arrayToPrint.forEach((beer) => {
+      domString += `<div class="card col-4">`
+      domString += `<div class="card-body">`
+      domString += `<h2 class="card-header">${beer.name}</h2>`
+      domString += `<p>${beer.type}</p>`
+      domString += `<img src=${beer.imageUrl} alt=${beer.name} class="img-fluid">`
+      domString += `<p>Style: ${beer.style}</p>`
+      domString += `<p>Ingredients: ${beer.ingredients}</p>`
+      domString += `<p>IBU: ${beer.ibu}</p>`
+      domString += `<p>ABV: ${beer.abv}</p>`
+      domString += `</div>`
+      domString += `</div>`
+    });
+  printToDom('beerCard', domString);
+};
  
     const mainEventListeners = () => {
       document.getElementById('add-beer').addEventListener('click', printBeer)
@@ -94,11 +223,17 @@ const sixPackBuilder = () => {
     }
  
     const init = () => {
-      mainEventListeners()
-
+      
       if(document.getElementById('founders') !== null) {
         domStringBuilder(arrayOfFounders);
+      } 
+      if(document.getElementById('beerCard') !== null) {
+        beerCardBuilder(arrayOfBeers);
+      }
+      if(document.getElementById('add-beer') !== null) {
+        mainEventListeners()
       }
     };
  
     init();
+
