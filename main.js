@@ -2,7 +2,7 @@ const arrayOfBeers = [
     {
      name: "Citra OG",
      type: "American wheat",
-     style: "Wheat",
+     style: "wheat",
      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/73/Weizenbier-ukko.jpg",
      ingredients: "malted wheat, Noble hops, yeast, water",
      ibu: 25,
@@ -11,7 +11,7 @@ const arrayOfBeers = [
     {
      name: "Hypertext",
      type: "Oatmeal Stout",
-     style: "Ales",
+     style: "ales",
      imageUrl: "https://c1.staticflickr.com/5/4111/4983706691_0e1e088c2f_b.jpg",
      ingredients: "malted barley, hops, yeast, water",
      ibu: 27,
@@ -20,7 +20,7 @@ const arrayOfBeers = [
     {
      name: "forEach(American)",
      type: "American Lager",
-     style: "Lagers",
+     style: "lagers",
      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3kK6xiKcLz9ERVaLn3LDpX07KI0PjNDB0jvrhCLpZqL1izFwp",
      ingredients: "malted barley, hops, yeast, water",
      ibu: 13,
@@ -29,7 +29,7 @@ const arrayOfBeers = [
     {
      name: "Parameter",
      type: "Pale Ale",
-     style: "Ales",
+     style: "ales",
      imageUrl: "http://art11.photozou.jp/pub/918/230918/photo/26047883_624.jpg",
      ingredients: "malted barley, hops, yeast, water",
      ibu: 40,
@@ -38,7 +38,7 @@ const arrayOfBeers = [
    {
      name: "Javascript",
      type: "Porter",
-     style: "Ales",
+     style: "ales",
      imageUrl: "https://farm6.staticflickr.com/5759/23173120300_41a31b2323_b.jpg",
      ingredients: "malted barley, hops, yeast, water",
      ibu: 32,
@@ -47,7 +47,7 @@ const arrayOfBeers = [
     {
      name: "Encryption",
      type: "English Brown",
-     style: "Ales",
+     style: "ales",
      imageUrl: "https://c1.staticflickr.com/6/5529/11163847405_b78604e766_b.jpg",
      ingredients: "malted barley, hops, yeast, water",
      ibu: 22,
@@ -56,7 +56,7 @@ const arrayOfBeers = [
     {
      name: "Double Click",
      type: "Doppelbock",
-     style: "Lagers",
+     style: "lagers",
      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-b8h6lyY1hdbY8RU4pgDJIlztu1Y9YBkI1NrbMVPyBaQ2IYvX",
      ingredients: "malted barley, hops, yeast, water",
      ibu: 20,
@@ -65,7 +65,7 @@ const arrayOfBeers = [
     {
      name: "Pixel",
      type: "Pilsner",
-     style: "Lagers",
+     style: "lagers",
      imageUrl: "http://capl.washjeff.edu/1/l/1753.jpg",
      ingredients: "malted barley, hops, yeast, water",
      ibu: 30,
@@ -74,7 +74,7 @@ const arrayOfBeers = [
     {
      name: "Hacker",
      type: "Schwarzbier",
-     style: "Lagers",
+     style: "lagers",
      imageUrl: "https://urbanmatter.com/chicago/wp-content/uploads/2016/08/dark-beer.jpg",
      ingredients: "malted barley, hops, yeast, water",
      ibu: 25,
@@ -83,7 +83,7 @@ const arrayOfBeers = [
     {
      name: "Bootstrap",
      type: "Belgian White",
-     style: "Wheat",
+     style: "wheat",
      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7CwrhxB69PhOa81pFiNnLs2fy8eGMpZS5wKeB4Jl1vVjZ2MEpZQ",
      ingredients: "malted wheat, hops, yeast, water",
      ibu: 10,
@@ -92,7 +92,7 @@ const arrayOfBeers = [
     {
      name: "Blue Screen of Death",
      type: "Blueberry",
-     style: "Specialty",
+     style: "specialty",
      imageUrl: "https://c1.staticflickr.com/3/2628/4122695099_80e09bac0d_b.jpg",
      ingredients: "malted wheat, hops, yeast, water, blueberries",
      ibu: 16,
@@ -101,9 +101,9 @@ const arrayOfBeers = [
     {
      name: "Digital Citizen",
      type: "Oktoberfest",
-     style: "Specialty",
+     style: "specialty",
      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZrOHCcYX--6_ndvjP8KFX9ZVv8jc9qxw1l3nFokJNABAO9eNK9Q",
-     ingredients: "malted barley, hops, yeast, water, blueberries",
+     ingredients: "malted barley, hops, yeast, water",
      ibu: 20,
      abv: 5.5
     },
@@ -164,8 +164,8 @@ const sixPackBuilder = () => {
     domString += `<div class="card mb-3" style="width: 18rem;">`
     domString += `<div class="card-body">`
     domString += `<h5 class="card-title">${beer.name}</h5>`
-    domString += `<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>`
-    domString += `<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>`
+    domString += `<h6 class="card-subtitle mb-2 text-muted">Good choice.</h6>`
+    domString += `<p class="card-text">Thanks for adding this Citra Beer!</p>`
     domString += `<button class="btn btn-primary remove" id=${beer.id}>Remove</button>`
     domString += `</div>`
     domString += `</div>`
@@ -187,7 +187,6 @@ const printToDom = (divId, textToPrint) => {
             domString +=  `<img src=${item.image} class="img-fluid founder-image" alt="Responsive image">`;
             domString +=  `<h3 class="card-title accent-color">${item.name}</h3>`;
             domString +=  `<p class="card-title text-primary-color">${item.description}</p>`;
-            domString +=  `<div class=> </div>`;
             domString +=  `</div>`;
             domString += `</div>`;
         });
@@ -211,6 +210,30 @@ const beerCardBuilder = (arrayToPrint) => {
     });
   printToDom('beerCard', domString);
 };
+
+const beerButton = (e) => {
+  const buttonId = e.target.id;
+  const selectedBeers = [];
+  arrayOfBeers.forEach((beer) => {
+    if (beer.style === buttonId) {
+        selectedBeers.push(beer);
+    }
+  });
+
+  if (buttonId === 'all') {
+    beerCardBuilder(arrayOfBeers);
+  } else {
+    beerCardBuilder(selectedBeers);
+  }
+};
+
+const beerButtonEvents = () => {
+  document.getElementById('ales').addEventListener('click', beerButton);
+  document.getElementById('lagers').addEventListener('click', beerButton);
+  document.getElementById('wheat').addEventListener('click', beerButton);
+  document.getElementById('specialty').addEventListener('click', beerButton);
+  document.getElementById('all').addEventListener('click', beerButton);
+};
  
     const mainEventListeners = () => {
       document.getElementById('add-beer').addEventListener('click', printBeer)
@@ -231,7 +254,10 @@ const beerCardBuilder = (arrayToPrint) => {
         beerCardBuilder(arrayOfBeers);
       }
       if(document.getElementById('add-beer') !== null) {
-        mainEventListeners()
+        mainEventListeners();
+      }
+      if(document.getElementById('beerCard') !== null) {
+        beerButtonEvents();
       }
     };
  
