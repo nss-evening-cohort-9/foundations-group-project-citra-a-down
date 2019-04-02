@@ -131,6 +131,47 @@ const arrayOfFounders = [
     image: 'https://m.media-amazon.com/images/M/MV5BODZjM2UzOTEtMTk5MC00NjZlLWJiM2EtMThhMDJhMGZkOGFkXkEyXkFqcGdeQXVyODQwMzE5OQ@@._V1_UX140_CR0,0,140,209_AL_.jpg'
   },
 ];
+
+let sixPack = [];
+let beerId = 1;
+
+const printBeer = (event) => {
+  const newBeer = {};
+  event.preventDefault();
+  newBeer.name = document.getElementById('beer-input').value;
+  newBeer.id = `beer${beerId}`;
+  beerId++;
+  sixPack.push(newBeer)
+  document.getElementById('beer-input').value = '';
+  sixPackBuilder();
+}
+
+const removeBeer = (btn) => {
+  let tempArray = [];
+  sixPack.forEach((beer) => {
+    console.log(btn.id, '/', beer.id)
+    if(btn.id !== beer.id) {
+      tempArray.push(beer);
+    }
+  })
+  sixPack = tempArray;
+  sixPackBuilder()
+}
+
+const sixPackBuilder = () => {
+  let domString = '';
+  sixPack.forEach((beer) => {
+    domString += `<div class="card mb-3" style="width: 18rem;">`
+    domString += `<div class="card-body">`
+    domString += `<h5 class="card-title">${beer.name}</h5>`
+    domString += `<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>`
+    domString += `<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>`
+    domString += `<button class="btn btn-primary remove" id=${beer.id}>Remove</button>`
+    domString += `</div>`
+    domString += `</div>`
+  })
+  printToDom('sixpack-container', domString)
+}
  
 const printToDom = (divId, textToPrint) => {
     const selectedDiv = document.getElementById(divId);
@@ -171,9 +212,27 @@ const beerCardBuilder = (arrayToPrint) => {
   printToDom('beerCard', domString);
 };
  
+    const mainEventListeners = () => {
+      document.getElementById('add-beer').addEventListener('click', printBeer)
+      document.addEventListener('click', function(event){
+        const removeButton = event.target
+        if(removeButton.className === 'btn btn-primary remove') {
+          removeBeer(removeButton)
+        }
+      })
+    }
+ 
     const init = () => {
+      
+      if(document.getElementById('founders') !== null) {
         domStringBuilder(arrayOfFounders);
+      } 
+      if(document.getElementById('beerCard') !== null) {
         beerCardBuilder(arrayOfBeers);
+      }
+      if(document.getElementById('add-beer') !== null) {
+        mainEventListeners()
+      }
     };
  
     init();
