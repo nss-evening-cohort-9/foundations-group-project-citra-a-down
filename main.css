@@ -10,11 +10,13 @@
 
 
 body {
-    background-color: rgb(255, 174, 0);
+    background-color: aliceblue;
+    background-image: url("https://cdn2.justwineapp.com/assets/article/2017/05/free-beer-images-keg-cask-tapping-creative-commons-cc-oktoberfest-photos.jpg");
+    background-position: top;
 }
 
 .home-jumbotron {
-    background-image: url("https://cdn2.justwineapp.com/assets/article/2017/05/free-beer-images-keg-cask-tapping-creative-commons-cc-oktoberfest-photos.jpg");
+    height: 600px;
 }
 
 .card-title {
@@ -49,6 +51,7 @@ body {
 }
 
 #ourBeersCarousel {
+    border: 5px solid #4CAF50;
     margin-top: 75px;
     margin-bottom: 75px;
 }
@@ -66,3 +69,12 @@ body {
     margin-bottom: 15px;
 }
 
+.section-container {
+    border-top: 5px solid #4CAF50;
+    border-bottom: 5px solid #4CAF50;
+    margin-bottom: 25px;
+}
+
+.footer-container {
+    border-top: 5px solid #4CAF50;
+}
