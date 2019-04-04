@@ -172,6 +172,24 @@ const sixPackBuilder = () => {
   })
   printToDom('sixpack-container', domString)
 }
+
+const carouselFill = () => {
+  let domString = '';
+  arrayOfBeers.forEach((beer) => {
+    if(beer.name === "Citra OG") {
+      domString += `<div class="carousel-item active">`
+    } else {
+      domString += `<div class="carousel-item">`
+    }
+    domString += `<img class="d-block col-8 offset-2" height="500" src=${beer.imageUrl} alt="First slide"></img>`
+    domString += `<div class="carousel-caption d-none d-md-block">`
+    domString += `<h5>${beer.name}</h5>`
+    domString += `<p>${beer.type}</p>`
+    domString += `</div>`
+    domString += `</div>`
+  })
+  printToDom('carousel-cont', domString)
+}
  
 const printToDom = (divId, textToPrint) => {
     const selectedDiv = document.getElementById(divId);
@@ -259,6 +277,9 @@ const beerButtonEvents = () => {
       if(document.getElementById('beerCard') !== null) {
         beerButtonEvents();
       }
+      if(document.getElementById('carousel-cont') !== null) {
+        carouselFill(arrayOfBeers);
+      } 
     };
  
     init();
