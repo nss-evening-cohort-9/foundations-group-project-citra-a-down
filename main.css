@@ -124,3 +124,12 @@ body {
 .w-30 {
    width: 30%;
 }
+
+#beer-card {
+  background-color: #FFE0B2;
+}
+
+#beer-name {
+  background-color: #4CAF50;
+  border: solid 1px #212121
+}
