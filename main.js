@@ -138,14 +138,18 @@ let beerId = 1;
 const printBeer = (event) => {
   event.preventDefault();
   const newBeer = {};
-  // if(event.target.id === 'add-beer') {
     newBeer.name = document.getElementById('beer-input').value;
     newBeer.id = `beer${beerId}`;
     beerId++;
     sixPack.push(newBeer)
     document.getElementById('beer-input').value = '';
     sixPackBuilder();
-  // }
+}
+
+const removeBeers = () => {
+  console.log('test')
+  sixPack = [];
+  sixPackBuilder()
 }
 
 const removeBeer = (btn) => {
@@ -257,6 +261,7 @@ const beerButtonEvents = () => {
  
     const mainEventListeners = () => {
       document.getElementById('sixpack-form').addEventListener('submit', printBeer)
+      document.getElementById('remove-beers').addEventListener('click', removeBeers)
       document.addEventListener('click', function(event){
         const removeButton = event.target
         if(removeButton.className === 'btn btn-primary remove') {

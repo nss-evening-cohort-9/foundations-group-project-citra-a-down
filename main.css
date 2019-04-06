@@ -117,6 +117,10 @@ body {
     border-top: 5px solid #4CAF50;
 }
 
+.navbar {
+   border-bottom: 5px solid #4CAF50;
+}
+
 .carousel-section {
   background-color: rgba(254, 124, 0, 0.5)
 }
@@ -132,4 +136,8 @@ body {
 #beer-name {
   background-color: #4CAF50;
   border: solid 1px #212121
+}
+
+.b-green {
+   border: solid 1px #4CAF50
 }
