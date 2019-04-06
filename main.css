@@ -120,3 +120,12 @@ body {
 .carousel-section {
   background-color: rgba(254, 124, 0, 0.5)
 }
+
+#beer-card {
+  background-color: #FFE0B2;
+}
+
+#beer-name {
+  background-color: #4CAF50;
+  border: solid 1px #212121
+}
