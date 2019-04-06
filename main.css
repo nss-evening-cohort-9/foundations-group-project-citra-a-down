@@ -102,6 +102,7 @@ body {
 
 #ourBeersList {
     font-weight: bold;
+    font-size: 17px;
 }
 
 #ourBeersList .row {
