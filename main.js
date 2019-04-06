@@ -167,12 +167,12 @@ const removeBeer = (btn) => {
 const sixPackBuilder = () => {
   let domString = '';
   sixPack.forEach((beer) => {
-    domString += `<div class="card mb-3" style="width: 18rem;">`
+    domString += `<div class="card bg-dark text-white mb-3" style="width: 18rem;">`
     domString += `<div class="card-body">`
     domString += `<h5 class="card-title">${beer.name}</h5>`
     domString += `<h6 class="card-subtitle mb-2 text-muted">Good choice.</h6>`
     domString += `<p class="card-text">Thanks for adding this Citra Beer!</p>`
-    domString += `<button class="btn btn-primary remove" id=${beer.id}>Remove</button>`
+    domString += `<button class="btn btn-dark accent-color b-green" id=${beer.id}>Remove</button>`
     domString += `</div>`
     domString += `</div>`
   })
