@@ -28,52 +28,46 @@
         </div>
     </nav>
 
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid carousel-section mb-0">
         <div class="container text-center">
           <h1 class="display-2">Create Your Own Sixpack</h1>
           <h2 id="ourBeersListHeader" class="display-8">Our Beers</h2>
           <div id="ourBeersList" class="container col-12 col-lg-8">
-            <div class="row">
-                <div class="col-4">
+            <div class="row align-items-between">
+                <div class="col-6 col-md-4 my-2">
                    Citra OG 
                 </div>
-                <div class="col-4">
+                <div class="col-6 col-md-4 my-2">
                     Hypertext
                 </div>
-                <div class="col-4">
+                <div class="col-6 col-md-4 my-2">
                     forEach(American)
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-4">
+                <div class="col-6 col-md-4 my-2">
                    Parameter
                 </div>
-                <div class="col-4">
+                <div class="col-6 col-md-4 my-2">
                     Javascript
                 </div>
-                <div class="col-4">
+                <div class="col-6 col-md-4 my-2">
                     Encryption
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-4">
+                <div class="col-6 col-md-4 my-2">
                    Double Click 
                 </div>
-                <div class="col-4">
+                <div class="col-6 col-md-4 my-2">
                     Pixel
                 </div>
-                <div class="col-4">
+                <div class="col-6 col-md-4 my-2">
                     Hacker
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-4 offset-4">
+                <div class="col-6 col-md-4 my-2">
                     Bootstrap
                 </div>
-                <div class="col-4">
+                <div class="col-6 col-md-4 my-2">
                     Blue Screen of Death
                 </div>
-                <div class="col-4">
+                <div class="col-6 col-md-4 my-2">
                     Digital Citizen
                 </div>
             </div>
@@ -81,21 +75,25 @@
         </div>
       </div>
 
-    <form class="container text-center">
-        <div class="form-group text-center">
-          <label for="beer"><h3>Choose a beer from the list</h3></label>
-          <input type="text" class="form-control" id="beer-input" aria-describedby="emailHelp" placeholder="Citra-A-Down">
-          <small id="emailHelp" class="form-text text-muted">Create your own 6-pack of beers, or 12-pack, or 24-pack, or truckload!</small>
+    <form id="sixpack-form" class="text-center section-container bg-dark p-5 mb-0">
+        <div class="container">
+            <div class="form-group text-center">
+              <label for="beer"><h3>Choose a beer from the list</h3></label>
+              <input type="text" class="form-control" id="beer-input" aria-describedby="emailHelp" placeholder="Citra-A-Down">
+              <small id="emailHelp" class="form-text text-muted">Create your own 6-pack of beers, or 12-pack, or 24-pack, or truckload!</small>
+            </div>
+            <button type="submit" id="add-beer" class="btn btn-dark accent-color b-green m-auto">Add to Six Pack</button>
+            <button type="button" id="remove-beers" class="btn btn-dark accent-color b-green m-auto">Start Over</button>
         </div>
-        <button type="button" id="add-beer" class="btn btn-primary m-auto">Add to Six Pack</button>
-        <button type="submit" id="remove-beers" class="btn btn-primary m-auto">Start Over</button>
     </form>
 
-    <div id="sixpack-container" class="container d-flex flex-wrap justify-content-between"></div>
+    <div class="carousel-section p-5">
+        <div id="sixpack-container" class="container d-flex flex-wrap justify-content-between"></div>
+    </div>
     
-    <nav class="navbar navbar-light bg-light d-flex flex-column" id="footer">
+    <nav class="footer-container navbar navbar-light bg-dark d-flex flex-column mb-0" id="footer">
         <img class="navbar-brand" id="footer-logo" src="../img/citra-logo.png" height="200px">
-        <img class="navbar-brand" id="footer-copyright" src="../img/copyright.jpg" height="100px">
+        <p class="font-weight-bold">&#169 copyright all rights reserved</p>
     </nav>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
