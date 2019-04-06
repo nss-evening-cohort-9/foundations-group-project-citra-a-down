@@ -4,7 +4,7 @@ const arrayOfBeers = [
      type: "American wheat",
      style: "wheat",
      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/73/Weizenbier-ukko.jpg",
-     ingredients: "malted wheat, Noble hops, yeast, water",
+     ingredients: ["malted wheat", "Noble hops", "yeast", "water"],
      ibu: 25,
      abv: 4.5
     },
@@ -13,7 +13,7 @@ const arrayOfBeers = [
      type: "Oatmeal Stout",
      style: "ales",
      imageUrl: "https://c1.staticflickr.com/5/4111/4983706691_0e1e088c2f_b.jpg",
-     ingredients: "malted barley, hops, yeast, water",
+     ingredients: ["malted barley", "hops", "yeast", "water"],
      ibu: 27,
      abv: 5.3
     },
@@ -22,7 +22,7 @@ const arrayOfBeers = [
      type: "American Lager",
      style: "lagers",
      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3kK6xiKcLz9ERVaLn3LDpX07KI0PjNDB0jvrhCLpZqL1izFwp",
-     ingredients: "malted barley, hops, yeast, water",
+     ingredients: ["malted barley", "hops", "yeast", "water"],
      ibu: 13,
      abv: 4.4
     },
@@ -31,7 +31,7 @@ const arrayOfBeers = [
      type: "Pale Ale",
      style: "ales",
      imageUrl: "http://art11.photozou.jp/pub/918/230918/photo/26047883_624.jpg",
-     ingredients: "malted barley, hops, yeast, water",
+     ingredients: ["malted barley", "hops", "yeast", "water"],
      ibu: 40,
      abv: 4.7
     },
@@ -40,7 +40,7 @@ const arrayOfBeers = [
      type: "Porter",
      style: "ales",
      imageUrl: "https://farm6.staticflickr.com/5759/23173120300_41a31b2323_b.jpg",
-     ingredients: "malted barley, hops, yeast, water",
+     ingredients: ["malted barley", "hops", "yeast", "water"],
      ibu: 32,
      abv: 5.6
     }, 
@@ -49,7 +49,7 @@ const arrayOfBeers = [
      type: "English Brown",
      style: "ales",
      imageUrl: "https://c1.staticflickr.com/6/5529/11163847405_b78604e766_b.jpg",
-     ingredients: "malted barley, hops, yeast, water",
+     ingredients: ["malted barley", "hops", "yeast", "water"],
      ibu: 22,
      abv: 4.6
     },
@@ -58,7 +58,7 @@ const arrayOfBeers = [
      type: "Doppelbock",
      style: "lagers",
      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-b8h6lyY1hdbY8RU4pgDJIlztu1Y9YBkI1NrbMVPyBaQ2IYvX",
-     ingredients: "malted barley, hops, yeast, water",
+     ingredients: ["malted barley", "hops", "yeast", "water"],
      ibu: 20,
      abv: 8.5
     },
@@ -67,7 +67,7 @@ const arrayOfBeers = [
      type: "Pilsner",
      style: "lagers",
      imageUrl: "http://capl.washjeff.edu/1/l/1753.jpg",
-     ingredients: "malted barley, hops, yeast, water",
+     ingredients: ["malted barley", "hops", "yeast", "water"],
      ibu: 30,
      abv: 4.6
     },
@@ -76,7 +76,7 @@ const arrayOfBeers = [
      type: "Schwarzbier",
      style: "lagers",
      imageUrl: "https://urbanmatter.com/chicago/wp-content/uploads/2016/08/dark-beer.jpg",
-     ingredients: "malted barley, hops, yeast, water",
+     ingredients: ["malted barley", "hops", "yeast", "water"],
      ibu: 25,
      abv: 4.7
     },
@@ -85,7 +85,7 @@ const arrayOfBeers = [
      type: "Belgian White",
      style: "wheat",
      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7CwrhxB69PhOa81pFiNnLs2fy8eGMpZS5wKeB4Jl1vVjZ2MEpZQ",
-     ingredients: "malted wheat, hops, yeast, water",
+     ingredients: ["malted wheat", "hops", "yeast", "water"],
      ibu: 10,
      abv: 4.5
     },
@@ -94,7 +94,7 @@ const arrayOfBeers = [
      type: "Blueberry",
      style: "specialty",
      imageUrl: "https://c1.staticflickr.com/3/2628/4122695099_80e09bac0d_b.jpg",
-     ingredients: "malted wheat, hops, yeast, water, blueberries",
+     ingredients: ["malted wheat", "hops", "yeast", "water", "blueberries"],
      ibu: 16,
      abv: 8
     },
@@ -103,7 +103,7 @@ const arrayOfBeers = [
      type: "Oktoberfest",
      style: "specialty",
      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZrOHCcYX--6_ndvjP8KFX9ZVv8jc9qxw1l3nFokJNABAO9eNK9Q",
-     ingredients: "malted barley, hops, yeast, water",
+     ingredients: ["malted barley", "hops", "yeast", "water"],
      ibu: 20,
      abv: 5.5
     },
@@ -214,13 +214,13 @@ const printToDom = (divId, textToPrint) => {
 const beerCardBuilder = (arrayToPrint) => {
   let domString = '';
     arrayToPrint.forEach((beer) => {
-      domString += `<div class="card col-4">`
+      domString += `<div class="card col-4" id="beer-card">`
       domString += `<div class="card-body">`
-      domString += `<h2 class="card-header">${beer.name}</h2>`
-      domString += `<p>${beer.type}</p>`
-      domString += `<img src=${beer.imageUrl} alt=${beer.name} class="img-fluid">`
-      domString += `<p>Style: ${beer.style}</p>`
-      domString += `<p>Ingredients: ${beer.ingredients}</p>`
+      domString += `<h2 class="card-header d-flex align-items-center justify-content-center" id="beer-name">${beer.name}</h2>`
+      domString += `<p id="beer-type">${beer.type}</p>`
+      domString += `<img src=${beer.imageUrl} alt=${beer.name} class="img-fluid" id="beer-img">`
+      domString += `<p class="font-weight-bold">Style: ${beer.style}</p>`
+      domString += '<p>Ingredients:' + ' ' + beer.ingredients.join(", ") + '</p>'
       domString += `<p>IBU: ${beer.ibu}</p>`
       domString += `<p>ABV: ${beer.abv}</p>`
       domString += `</div>`
