@@ -172,7 +172,7 @@ const sixPackBuilder = () => {
     domString += `<h5 class="card-title">${beer.name}</h5>`
     domString += `<h6 class="card-subtitle mb-2 text-muted">Good choice.</h6>`
     domString += `<p class="card-text">Thanks for adding this Citra Beer!</p>`
-    domString += `<button class="btn btn-dark accent-color b-green" id=${beer.id}>Remove</button>`
+    domString += `<button class="remove btn btn-dark accent-color b-green" id=${beer.id}>Remove</button>`
     domString += `</div>`
     domString += `</div>`
   })
@@ -264,7 +264,7 @@ const beerButtonEvents = () => {
       document.getElementById('remove-beers').addEventListener('click', removeBeers)
       document.addEventListener('click', function(event){
         const removeButton = event.target
-        if(removeButton.className === 'btn btn-primary remove') {
+        if(removeButton.classList[0] === 'remove') {
           removeBeer(removeButton)
         }
       })
