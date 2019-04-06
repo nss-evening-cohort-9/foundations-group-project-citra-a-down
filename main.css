@@ -120,3 +120,7 @@ body {
 .carousel-section {
   background-color: rgba(254, 124, 0, 0.5)
 }
+
+.w-30 {
+   width: 30%;
+}
