@@ -136,14 +136,20 @@ let sixPack = [];
 let beerId = 1;
 
 const printBeer = (event) => {
-  const newBeer = {};
   event.preventDefault();
-  newBeer.name = document.getElementById('beer-input').value;
-  newBeer.id = `beer${beerId}`;
-  beerId++;
-  sixPack.push(newBeer)
-  document.getElementById('beer-input').value = '';
-  sixPackBuilder();
+  const newBeer = {};
+    newBeer.name = document.getElementById('beer-input').value;
+    newBeer.id = `beer${beerId}`;
+    beerId++;
+    sixPack.push(newBeer)
+    document.getElementById('beer-input').value = '';
+    sixPackBuilder();
+}
+
+const removeBeers = () => {
+  console.log('test')
+  sixPack = [];
+  sixPackBuilder()
 }
 
 const removeBeer = (btn) => {
@@ -161,12 +167,12 @@ const removeBeer = (btn) => {
 const sixPackBuilder = () => {
   let domString = '';
   sixPack.forEach((beer) => {
-    domString += `<div class="card mb-3" style="width: 18rem;">`
+    domString += `<div class="card bg-dark text-white mb-3" style="width: 18rem;">`
     domString += `<div class="card-body">`
     domString += `<h5 class="card-title">${beer.name}</h5>`
     domString += `<h6 class="card-subtitle mb-2 text-muted">Good choice.</h6>`
     domString += `<p class="card-text">Thanks for adding this Citra Beer!</p>`
-    domString += `<button class="btn btn-primary remove" id=${beer.id}>Remove</button>`
+    domString += `<button class="btn btn-dark accent-color b-green" id=${beer.id}>Remove</button>`
     domString += `</div>`
     domString += `</div>`
   })
@@ -254,7 +260,8 @@ const beerButtonEvents = () => {
 };
  
     const mainEventListeners = () => {
-      document.getElementById('add-beer').addEventListener('click', printBeer)
+      document.getElementById('sixpack-form').addEventListener('submit', printBeer)
+      document.getElementById('remove-beers').addEventListener('click', removeBeers)
       document.addEventListener('click', function(event){
         const removeButton = event.target
         if(removeButton.className === 'btn btn-primary remove') {

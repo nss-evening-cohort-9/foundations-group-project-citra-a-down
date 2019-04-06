@@ -28,23 +28,29 @@
         </div>
     </nav>
 
-    <div class="default-primary-color">
-        <h1>Our Beers</h1>
-        <p>Citra Beer has been brewed in Nashville since 2019. Check out our 12 regular brews including the original Citra OG American Wheat. Head over to <a href="./six-pack.html">Create Your Own Six-Pack</a> to take home a sample pack of our beers.</p>
-      </div>
-      <div>
-          <button type="button" class="btn btn-secondary" id="all">All</button>
-          <button type="button" class="btn btn-secondary" id="ales">Ales</button>
-          <button type="button" class="btn btn-secondary" id="lagers">Lagers</button>
-          <button type="button" class="btn btn-secondary" id="wheat">Wheat Beers</button>
-          <button type="button" class="btn btn-secondary" id="specialty">Specialty Beers</button>
-      </div>
+    <div class="jumbotron jumbotron-fluid carousel-section mb-0">
+            <div class="container text-center">
+              <h1 class="display-2">Our Beers</h1>
+              <div id="" class="d-flex flex-wrap text-center">
+                  <div>Citra Beer has been brewed in Nashville since 2019. Check out our 12 regular brews including the original Citra OG American Wheat. Head over to <a href="./six-pack.html">Create Your Own Six-Pack</a> to take home a sample pack of our beers.</div>
+                  <div class="m-auto pt-3">
+                      <button type="button" class="btn btn-dark accent-color" id="all">All</button>
+                      <button type="button" class="btn btn-dark accent-color" id="ales">Ales</button>
+                      <button type="button" class="btn btn-dark accent-color" id="lagers">Lagers</button>
+                      <button type="button" class="btn btn-dark accent-color" id="wheat">Wheat Beers</button>
+                      <button type="button" class="btn btn-dark accent-color" id="specialty">Specialty Beers</button>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-    <div id="beerCard" class="container d-flex flex-wrap justify-content-between"></div>
+          <div class="section-container bg-dark p-5 mb-5">
+              <div id="beerCard" class="container d-flex flex-wrap justify-content-between"></div>
+          </div>
 
-    <nav class="navbar navbar-light bg-light d-flex flex-column" id="footer">
+    <nav class="footer-container navbar navbar-light bg-dark d-flex flex-column mb-0" id="footer">
         <img class="navbar-brand" id="footer-logo" src="../img/citra-logo.png" height="200px">
-        <img class="navbar-brand" id="footer-copyright" src="../img/copyright.jpg" height="100px">
+        <p class="font-weight-bold">&#169 copyright all rights reserved</p>
     </nav>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
